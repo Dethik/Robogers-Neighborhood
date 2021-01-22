@@ -8,8 +8,10 @@
 
 * HTML
 * CSS
+* Bootstrap
 * Markdown
 * JavaScript
+* Jquery
 
 ## Description
 
