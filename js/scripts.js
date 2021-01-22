@@ -12,6 +12,11 @@ $(document).ready(function() {
       $(".problemText").text("'Zero' isn't valid, try something more!");
       $("#problem").show();
       $("#output").hide();
+    }
+    else if (input < 0) {
+      $(".problemText").text("Negative numbers lead to Negative Neighbors, try some thing positive friend!");
+      $("#problem").show();
+      $("#output").hide();
     } else {
       $(".outputText").text(temp(input));
       $("#output").show();
@@ -44,3 +49,9 @@ function temp(input) {
   const product = outtyput.join(", ");
   return product
 };
+
+
+//outtyput -> outputA
+//splity -> splitA
+//stringer -> stringA
+//inputAr -> inputA
