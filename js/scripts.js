@@ -3,6 +3,7 @@ $(document).ready(function() {
     event.preventDefault();
     const input = $("#numberInput").val();
     temp(input)
+    // console.log(product)
   });
 });
 
@@ -25,8 +26,9 @@ function temp(input) {
       outtyput.push("Beep!")
     } else {
       outtyput.push(i);
-      // console.log(outtyput)
     }
   }
-  return product
+  const product = outtyput.join();
+  console.log(product)
+  // return product
 };
