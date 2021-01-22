@@ -1,3 +1,12 @@
 #output, #problem  {
   display: hide;
+  margin: 14px;
+  text-align: center;
+}
+body {
+  background-color: black;
+  color: lime;
+}
+h1 {
+  text-align: center;
 }

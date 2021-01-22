@@ -2,6 +2,7 @@ $(document).ready(function() {
   $("#neighborhood").submit(function(event) {
     event.preventDefault();
     const input = $("#numberInput").val();
+    $(".nameInput").text($("#name").val() + ", ");
     if (input > 1000){
       $(".problemText").text("Lets not damage our software friend, try a smaller unit!");
       $("#problem").show();
