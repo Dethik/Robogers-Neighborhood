@@ -36,22 +36,26 @@ Email: Thorgrim88@gmail.com
 
 ## Test Specs
 
-Describe:beep()
-Test:"It should return any number containing 1 in an array with 'Beep!'"
+Describe: beep()
+Test: "It should return any number containing 1 in an array with 'Beep!'"
 Expect();
 
-Describe:boop()
-Test:"It should return any number containing 2 in an array with 'Boop!'"
+Describe: boop()
+Test: "It should return any number containing 2 in an array with 'Boop!'"
 Expect();
 
-Describe:neighbor()
-Test:"It should return any number containing 3 in an array with 'Won't you be my neighbor?'"
+Describe: neighbor()
+Test: "It should return any number containing 3 in an array with 'Won't you be my neighbor?'"
 Expect();
 
-Describe:neighborSpecial()
-Test:"It should return the numbers 13 and 32 with 'Won't you be my neighbor?'"
+Describe: neighborSpecial()
+Test: "It should return the numbers 13 and 32 with 'Won't you be my neighbor?'"
 Expect();
 
-Describe:boopSpecial()
-Test:"It should return the number 21 with 'Boop.'"
+Describe: boopSpecial()
+Test: "It should return the number 21 with 'Boop.'"
+Expect();
+
+Describe: input()
+Test: "It should take the input from a user and count by 1 from 0 up to the number, using all business logic conditions to replace certain numbers."
 Expect();
