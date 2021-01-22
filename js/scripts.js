@@ -3,18 +3,19 @@ $(document).ready(function() {
     event.preventDefault();
     const input = $("#numberInput").val();
     if (input > 1000){
-      $(".problemText").text()
-      $("#problem").show()
-      $("output").hide()
+      $(".problemText").text("Lets not damage our software friend, try a smaller unit!");
+      $("#problem").show();
+      $("#output").hide();
     } 
-    else if (input === 0) {
-      $(".problemText").text()
-      $("#problem").show()
-      $("output").hide()
-    }
-    else {
-      $(".outputText").temp(input)
-    }
+    else if (input == 0) {
+      $(".problemText").text("'Zero' isn't valid, try something more!");
+      $("#problem").show();
+      $("#output").hide();
+    } else {
+      $(".outputText").text(temp(input));
+      $("#output").show();
+      $("#problem").hide();
+    };
   });
 });
 
