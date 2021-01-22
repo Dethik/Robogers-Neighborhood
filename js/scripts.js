@@ -2,7 +2,19 @@ $(document).ready(function() {
   $("#neighborhood").submit(function(event) {
     event.preventDefault();
     const input = $("#numberInput").val();
-    temp(input)
+    if (input > 1000){
+      $(".problemText").text()
+      $("#problem").show()
+      $("output").hide()
+    } 
+    else if (input === 0) {
+      $(".problemText").text()
+      $("#problem").show()
+      $("output").hide()
+    }
+    else {
+      $(".outputText").temp(input)
+    }
   });
 });
 
