@@ -1,4 +1,6 @@
 $(document).ready(function() {
+  $("#output").hide();
+  $("#problem").hide()
   $("#neighborhood").submit(function(event) {
     event.preventDefault();
     const input = $("#numberInput").val();
@@ -24,6 +26,7 @@ $(document).ready(function() {
     };
   });
 });
+
 function temp(input) {
   let inputA = [];
   let stringA = [];
