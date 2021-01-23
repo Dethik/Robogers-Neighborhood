@@ -5,50 +5,46 @@ $(document).ready(function() {
     $(".nameInput").text($("#name").val() + ", ");
     if (input > 1000){
       $(".problemText").text("Lets not damage our software friend, try a smaller unit!");
-      $("#problem").show();
-      $("#output").hide();
+      $("#problem").fadeIn();
+      $("#output").fadeOut();
     } 
     else if (input == 0) {
       $(".problemText").text("'Zero' isn't valid, try something more!");
-      $("#problem").show();
-      $("#output").hide();
+      $("#problem").fadeIn();
+      $("#output").fadeOut();
     }
     else if (input < 0) {
       $(".problemText").text("Negative numbers lead to Negative Neighbors, try some thing positive friend!");
-      $("#problem").show();
-      $("#output").hide();
+      $("#problem").fadeIn();
+      $("#output").fadeOut();
     } else {
       $(".outputText").text(temp(input));
-      $("#output").show();
-      $("#problem").hide();
+      $("#output").fadeIn();
+      $("#problem").fadeOut();
     };
   });
 });
-
 function temp(input) {
   let inputA = [];
   let stringA = [];
   let splitA = [];
-  let outtyput = [];
+  let outputA = [];
   for (let i = 0; i <= input; i++) {
     inputA.push(i);
     stringA = inputA.join(" ");
     splitA = stringA.split(" ");
     if (splitA[i].includes("3")) { 
-      outtyput.push("Won't you be my neighbor?")
+      outputA.push("Won't you be my neighbor?")
     }
     else if (splitA[i].includes("2")) {
-      outtyput.push("Boop!")
+      outputA.push("Boop!")
     }
     else if (splitA[i].includes("1")) {
-      outtyput.push("Beep!")
+      outputA.push("Beep!")
     } else {
-      outtyput.push(i);
+      outputA.push(i);
     }
   }
-  const product = outtyput.join(", ");
+  const product = outputA.join(", ");
   return product
 };
-
-
-//outtyput -> outputA
