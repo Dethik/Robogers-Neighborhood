@@ -1,31 +1,17 @@
-$(document).ready(function() {
-  $("#output").hide();
-  $("#problem").hide()
-  $("#neighborhood").submit(function(event) {
-    event.preventDefault();
-    const input = $("#numberInput").val();
-    $(".nameInput").text($("#name").val() + ", ");
-    if (input > 1000){
-      $(".problemText").text("Lets not damage our software friend, try a smaller unit!");
-      $("#problem").fadeIn();
-      $("#output").fadeOut();
-    } 
-    else if (input == 0) {
-      $(".problemText").text("'Zero' isn't valid, try something more!");
-      $("#problem").fadeIn();
-      $("#output").fadeOut();
-    }
-    else if (input < 0) {
-      $(".problemText").text("Negative numbers lead to Negative Neighbors, try some thing positive friend!");
-      $("#problem").fadeIn();
-      $("#output").fadeOut();
-    } else {
-      $(".outputText").text(temp(input));
-      $("#output").fadeIn();
-      $("#problem").fadeOut();
-    };
-  });
-});
+function checkError(input) {
+  if (input > 1000){
+    output = ("Lets not damage our software friend, try a smaller unit!");
+  } 
+  else if (input == 0) {
+    output = ("'Zero' isn't valid, try something more!");
+  }
+  else if (input < 0) {
+    output = ("Negative numbers lead to Negative Neighbors, try some thing positive friend!");
+  } else {
+    output = input;
+  };
+  return output;
+}
 
 function temp(input) {
   let inputA = [];
@@ -51,3 +37,17 @@ function temp(input) {
   const product = outputA.join(", ");
   return product
 };
+
+$(document).ready(function() {
+  $("#output").hide();
+  $("#problem").hide()
+  $("#neighborhood").submit(function(event) {
+    event.preventDefault();
+    const input = $("#numberInput").val();
+    $(".nameInput").text($("#name").val() + ", ");
+    
+    let output = temp(input)
+    $(".outputText").text(output);
+    $("#output").fadeIn();
+  });
+});
