@@ -11,41 +11,44 @@ function checkError(input) {
     output = input;
   };
   return output;
-}
+};
 
 function temp(input) {
+  let checked = checkError(input)
   let inputA = [];
   let stringA = [];
   let splitA = [];
   let outputA = [];
-  for (let i = 0; i <= input; i++) {
-    inputA.push(i);
-    stringA = inputA.join(" ");
-    splitA = stringA.split(" ");
-    if (splitA[i].includes("3")) { 
-      outputA.push("Won't you be my neighbor?")
+  if (isNaN(checked)) {
+    return checked;
+  } else {
+    for (let i = 0; i <= input; i++) {
+      inputA.push(i);
+      stringA = inputA.join(" ");
+      splitA = stringA.split(" ");
+      if (splitA[i].includes("3")) { 
+        outputA.push("Won't you be my neighbor?");
+      }
+      else if (splitA[i].includes("2")) {
+        outputA.push("Boop!");
+      }
+      else if (splitA[i].includes("1")) {
+        outputA.push("Beep!");
+      } else {
+        outputA.push(i);
+      }
     }
-    else if (splitA[i].includes("2")) {
-      outputA.push("Boop!")
-    }
-    else if (splitA[i].includes("1")) {
-      outputA.push("Beep!")
-    } else {
-      outputA.push(i);
-    }
+    const product = outputA.join(", ");
+    return product;
   }
-  const product = outputA.join(", ");
-  return product
 };
 
 $(document).ready(function() {
   $("#output").hide();
-  $("#problem").hide()
   $("#neighborhood").submit(function(event) {
     event.preventDefault();
     const input = $("#numberInput").val();
     $(".nameInput").text($("#name").val() + ", ");
-    
     let output = temp(input)
     $(".outputText").text(output);
     $("#output").fadeIn();
